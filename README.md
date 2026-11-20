@@ -6,4 +6,8 @@ Uruchomienie: bash scripts/process.sh dane.txt result.txt
 
 Bezpieczeństwo: Ochrona przed błędnnymi danymi wejściowymi lub ich brakiem (skrypt check.sh wymaga małych poprawek)
 
+
 Dopisane przez Mateusz Micek
+
+Strona projektu: https://szyszon2137.github.io/ndp-projekt/
+
