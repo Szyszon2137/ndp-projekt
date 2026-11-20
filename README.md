@@ -4,4 +4,4 @@ Wymagania: Klient i serwer Linux, oba posiadające OpenSSH
 
 Uruchomienie: bash scripts/process.sh dane.txt result.txt
 
-BEzpieczeństwo: Ochrona przed błędnnymi danymi wejściowymi lub ich brakiem
+Bezpieczeństwo: Ochrona przed błędnnymi danymi wejściowymi lub ich brakiem (skrypt check.sh wymaga małych poprawek)

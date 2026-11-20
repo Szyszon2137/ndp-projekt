@@ -14,6 +14,11 @@ if [[ ! -f "$input" ]]; then
     exit 3
 fi
 
+[[ -s "$input" ]] || {
+  printf 'Pusty plik\n' >&2
+  exit 4
+}
+
 # Nie podążaj za dowiązaniami symbolicznymi wskazującymi na dowolny plik.
 if [[ -L "$output" ]]; then
     printf 'Ścieżka wyjściowa nie może być dowiązaniem symbolicznym: %s\n' "$output" >&2
@@ -42,7 +47,3 @@ if [[ -L "$output" || "$input" -ef "$output" ]]; then
 fi
 mv -fT -- "$tmp" "$output"
 
-[[ -s "$input" ]] || {
-  printf 'Pusty plik\n' >&2
-  exit 4
-}
