@@ -1,6 +1,8 @@
 #import "@preview/touying:0.8.0": *
 #import themes.simple: *
 #show: simple-theme.with(aspect-ratio: "16-9")
+#import "makra.typ": metryka
+#import "metryki.typ": raport
 
 
 = Projekt SSH
@@ -21,7 +23,7 @@ Zdalne przetwarzanie pliku przez SSH i Bash.
 
 == Wynik
 
-- Faza testowa: Liczba_wierszy=4
+- Faza testowa: #metryka("Liczba_wierszy", raport.liczba_wierszy)
 #pause
 - Faza wdrożeniowa: Plik wynikowy
 
@@ -36,9 +38,9 @@ Zdalne przetwarzanie pliku przez SSH i Bash.
 #table(
   columns: (1fr, 2fr),
   table.header([*Etap*], [*Wynik*]),  
-  [Test], [Liczba_wierszy=4],
-  [Bezpieczenstwo], [Brak haseł w skrypcie, uzycie kluczy SSH]
+  [Test], metryka("Liczba_wierszy", raport.liczba_wierszy),
+  [Bezpieczenstwo], metryka("Tryb", raport.tryb)
 )]
 
-#focus-slide[Wyniki przetwarzania: 'Liczba_wierszy=4'
+#focus-slide[Wyniki przetwarzania: #metryka("Liczba_wierszy", raport.liczba_wierszy)
 ]

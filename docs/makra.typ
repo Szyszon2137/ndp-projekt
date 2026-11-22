@@ -6,3 +6,5 @@
 ]
 
 #let krok(numer, opis) = text(fill: navy)[#numer] + text(fill: luma(0))[. #opis] + text(fill: luma(0))[→]
+
+#let metryka(nazwa, wartosc) = text(fill: luma(0))[#nazwa] + text(fill: navy)[=#wartosc]

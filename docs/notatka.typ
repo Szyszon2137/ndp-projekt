@@ -1,5 +1,6 @@
 
-#import "makra.typ": wyroznij, ramka, krok
+#import "makra.typ": wyroznij, ramka, krok, metryka
+#import "metryki.typ": raport
 #set page(paper: "a4", margin: 22mm)
 #set text(lang: "pl", size: 11pt)
 #set heading(numbering: "1.")
@@ -18,7 +19,7 @@ Uzywamy #wyroznij[Typst] do opisu projektu wykonanego w Bash i SSH.
 
 Proces ma cztery etapy: SSH, SCP, Bash, SCP.
 
-#ramka[Oczekiwany rezultat: `Liczba_wierszy=4`.]
+#ramka[Oczekiwany rezultat: #metryka("Liczba_wierszy", raport.liczba_wierszy).]
 
 == Przyklad matematyczny
 
@@ -29,8 +30,8 @@ $ sum_(n=1)^oo n(n+1) / (n+2) $
 #table(
     columns: (1fr, 2fr),
     table.header([*Etap*], [*Wynik*]),
-    [Test], [Liczba_wierszy=4],
-    [Wdrożenie], [Plik wynikowy]
+    [Test], metryka("Liczba_wierszy", raport.liczba_wierszy),
+    [Wdrożenie], metryka("Tryb", raport.tryb)
 )
 
 #figure(
